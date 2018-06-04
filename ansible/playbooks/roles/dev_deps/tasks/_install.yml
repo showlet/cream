@@ -1,0 +1,16 @@
+---
+- name: install dev dependencies
+  become: yes
+  apt: pkg={{ item }}
+  with_items:
+    - build-essential
+    - git
+    - autoconf 
+    - automake 
+    - libtool 
+    - make 
+    - gcc 
+    - g++
+    - python3 
+    - gettext 
+    - unzip

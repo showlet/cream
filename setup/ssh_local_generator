@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+sudo apt-get install --yes openssh-server
+ssh-keygen -t rsa
+cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
+chmod og-wx ~/.ssh/authorized_keys 

@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+chmod +rx $DIR/ansible_install
+chmod +rx $DIR/ssh_local_generator
+$DIR/ansible_install
+$DIR/ssh_local_generator

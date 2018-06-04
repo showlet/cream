@@ -1,0 +1,7 @@
+---
+- hosts: local
+  remote_user: showlet
+  become_method: sudo
+  roles:
+    - dev_deps
+    - nvm
