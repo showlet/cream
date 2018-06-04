@@ -1,4 +1,3 @@
----
 - name: install dev dependencies
   become: yes
   apt: pkg={{ item }}
