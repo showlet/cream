@@ -1,9 +1,11 @@
-- name: install dev dependencies
+- name: install base dependencies
   become: yes
   apt: pkg={{ item }}
   with_items:
     - build-essential
     - git
+    - vim
+    - nano
     - autoconf 
     - automake 
     - libtool 

@@ -3,5 +3,6 @@
   remote_user: showlet
   become_method: sudo
   roles:
-    - dev_deps
+    - base_dependencies
     - nvm
+    - jvm

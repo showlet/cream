@@ -5,3 +5,4 @@ chmod +rx $DIR/ansible_install
 chmod +rx $DIR/ssh_local_generator
 $DIR/ansible_install
 $DIR/ssh_local_generator
+sudo service ssh start

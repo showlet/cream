@@ -1,0 +1,5 @@
+- name: Install jdk
+  become: yes
+  apt: pkg={{ item }}
+  with_items:
+    - openjdk-8-jdk
