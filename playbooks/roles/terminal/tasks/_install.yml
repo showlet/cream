@@ -1,0 +1,27 @@
+- name: Apt install Terminator
+  become: yes
+  apt: pkg={{ item }}
+  with_items:
+    - terminator
+
+- name: Create terminator's config folder
+  file: 
+    path: ~/.config/terminator
+    state: directory
+    mode: 0775
+    recurse: yes
+
+- name: Copy terminator's config
+  copy:
+    dest: ~/.config/terminator/config
+    src: "{{ role_path }}/configs/terminator/config"
+
+- name: Copy bashrc
+  copy:
+    dest: ~/.bashrc
+    src: "{{ role_path }}/configs/bash/.bashrc"
+
+- name: Copy bash_ps1
+  copy:
+    dest: ~/.bash_ps1
+    src: "{{ role_path }}/configs/bash/.bash_ps1"

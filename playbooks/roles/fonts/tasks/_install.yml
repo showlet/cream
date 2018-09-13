@@ -1,0 +1,16 @@
+- name: Create temporary download folder
+  file: 
+    path: tmp_cream
+    state: directory
+    mode: 0775
+
+- name: Install hasklig fonts
+  get_url:
+    url: https://github.com/i-tu/Hasklig/releases/download/1.1/Hasklig-1.1.zip
+    dest: tmp_cream
+
+- name: Unarchive hasklig fonts
+  unarchive:
+    src: tmp_cream/Hasklig-1.1.zip
+    dest: ~/.local/share/fonts
+    copy: no

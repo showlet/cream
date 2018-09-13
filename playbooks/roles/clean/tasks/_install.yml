@@ -1,0 +1,4 @@
+- name: Clean temporary download folder
+  file: 
+    state: absent
+    path: tmp_cream
