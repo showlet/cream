@@ -3,9 +3,11 @@
   remote_user: showlet
   become_method: sudo
   roles:
-    #- base_dependencies
-    #- nvm
-    #- jvm
+    - teardown
+    - setup
+    - basictools
     - terminal
-    #- fonts
-    - clean
+    - fonts
+    - nvm
+    - webassembly
+    - teardown

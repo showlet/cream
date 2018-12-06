@@ -1,0 +1,15 @@
+- name: Clone emsdk into /tmp.
+  git:
+    repo: https://github.com/juj/emsdk.git 
+    version: master
+    dest: /tmp/tmp_cream/emsdk
+    accept_hostkey: yes
+  become: no
+
+- name: Perform Install
+  shell: /tmp/tmp_cream/emsdk/emsdk install latest
+  debugger: always
+
+- name: Perform Activation
+  shell: /tmp/tmp_cream/emsdk/emsdk activate latest
+  debugger: always

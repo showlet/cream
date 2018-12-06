@@ -1,0 +1,5 @@
+- name: Create temporary download folder
+  file: 
+    path: /tmp/tmp_cream
+    state: directory
+    mode: 0775

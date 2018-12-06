@@ -1,2 +1,2 @@
-- name: Nvm installation
+- name: Installing wasm
   import_tasks: _install.yml
