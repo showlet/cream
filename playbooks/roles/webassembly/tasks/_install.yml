@@ -14,7 +14,7 @@
   become: no
 
 - name: Perform wabt Install
-  shell: pushd /tmp/tmp_cream/wabt; make;
+  shell: pushd /tmp/tmp_cream/wabt; make; popd;
   debugger: always
 
 - name: Clone emsdk into /tmp.

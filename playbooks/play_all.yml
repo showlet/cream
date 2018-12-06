@@ -5,9 +5,9 @@
   roles:
     - teardown
     - setup
-    #- basictools
-    #- terminal
-    #- fonts
-    #- nvm
+    - basictools
+    - terminal
+    - fonts
+    - nvm
     - webassembly
     - teardown
