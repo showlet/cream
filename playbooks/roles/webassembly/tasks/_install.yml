@@ -1,3 +1,22 @@
+- name: install wabt dependencies
+  become: yes
+  apt: pkg={{ item }}
+  with_items:
+    - cmake
+    - clang
+
+- name: Clone wabt into /tmp/tmp_cream
+  git:
+    repo: https://github.com/WebAssembly/wabt.git 
+    version: master
+    dest: /tmp/tmp_cream/wabt
+    accept_hostkey: yes
+  become: no
+
+- name: Perform wabt Install
+  shell: pushd /tmp/tmp_cream/wabt; make;
+  debugger: always
+
 - name: Clone emsdk into /tmp.
   git:
     repo: https://github.com/juj/emsdk.git 
@@ -6,10 +25,10 @@
     accept_hostkey: yes
   become: no
 
-- name: Perform Install
+- name: Perform emsdk Install
   shell: /tmp/tmp_cream/emsdk/emsdk install latest
   debugger: always
 
-- name: Perform Activation
+- name: Perform emsdk Activation
   shell: /tmp/tmp_cream/emsdk/emsdk activate latest
   debugger: always
