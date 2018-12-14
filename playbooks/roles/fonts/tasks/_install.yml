@@ -7,10 +7,10 @@
 - name: Install hasklig fonts
   get_url:
     url: https://github.com/i-tu/Hasklig/releases/download/1.1/Hasklig-1.1.zip
-    dest: /tmp/tmp_cream
+    dest: "{{ tmp_folder }}"
 
 - name: Unarchive hasklig fonts
   unarchive:
-    src: /tmp/tmp_cream/Hasklig-1.1.zip
+    src: "{{ tmp_folder }}/Hasklig-1.1.zip"
     dest: ~/.local/share/fonts
     copy: no

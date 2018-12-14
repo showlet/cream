@@ -1,4 +1,4 @@
 - name: Clean temporary path
   file:
     state: absent
-    path: /tmp/tmp_cream
+    path: "{{ tmp_folder }}"

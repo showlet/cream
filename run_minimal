@@ -2,5 +2,5 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 pushd $DIR/ansible
-ansible-playbook ../playbooks/minimal.yml --ask-become-pass
+ansible-playbook ../playbooks/minimal.yml --ask-become-pass -e "ansible_user=$USER"
 popd

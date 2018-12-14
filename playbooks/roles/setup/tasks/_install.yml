@@ -1,5 +1,5 @@
 - name: Create temporary download folder
   file: 
-    path: /tmp/tmp_cream
+    path: "{{ tmp_folder }}"
     state: directory
     mode: 0775

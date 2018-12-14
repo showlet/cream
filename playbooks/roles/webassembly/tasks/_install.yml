@@ -9,26 +9,26 @@
   git:
     repo: https://github.com/WebAssembly/wabt.git 
     version: master
-    dest: /tmp/tmp_cream/wabt
+    dest: "{{ tmp_folder }}/wabt"
     accept_hostkey: yes
   become: no
 
 - name: Perform wabt Install
-  shell: pushd /tmp/tmp_cream/wabt; make; popd;
+  shell: pushd "{{ tmp_folder }}/wabt"; make; popd;
   debugger: always
 
 - name: Clone emsdk into /tmp.
   git:
     repo: https://github.com/juj/emsdk.git 
     version: master
-    dest: /tmp/tmp_cream/emsdk
+    dest: "{{ tmp_folder }}/emsdk"
     accept_hostkey: yes
   become: no
 
 - name: Perform emsdk Install
-  shell: /tmp/tmp_cream/emsdk/emsdk install latest
+  shell: "{{ tmp_folder }}/emsdk/emsdk install latest"
   debugger: always
 
 - name: Perform emsdk Activation
-  shell: /tmp/tmp_cream/emsdk/emsdk activate latest
+  shell: "{{ tmp_folder }}/emsdk/emsdk activate latest"
   debugger: always
