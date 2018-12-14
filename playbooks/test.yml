@@ -1,8 +1,0 @@
----
-- hosts: local
-  remote_user: "{{ ansible_user }}"
-  become_method: sudo
-  vars:
-     tmp_folder: /tmp/tmp_cream/
-  roles:
-     - devtools

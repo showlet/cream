@@ -1,2 +1,0 @@
-- name: Wohoho 
-  shell: mkdir {{ tmp_folder }}

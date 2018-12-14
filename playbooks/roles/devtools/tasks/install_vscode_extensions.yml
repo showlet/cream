@@ -1,0 +1,9 @@
+- name: install extensions
+  become: yes
+  become_user: '{{ ansible_user }}'
+  vscode_extensions:
+    name: '{{ item.1 }}'
+  with_subelements:
+    - '{{ users }}'
+    - visual_studio_code_extensions
+    - skip_missing: yes

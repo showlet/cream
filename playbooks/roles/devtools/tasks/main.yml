@@ -1,2 +1,5 @@
 - name: Installing base dependencies
-  import_tasks: _install.yml
+  import_tasks: install_vscode.yml
+  import_tasks: install_vscode_extensions.yml
+  
+

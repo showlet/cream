@@ -1,0 +1,21 @@
+---
+- hosts: local
+  remote_user: "{{ ansible_user }}"
+  become_method: sudo
+  vars:
+    tmp_folder: /tmp/tmp_cream/
+  roles:
+    - setup
+    - basictools
+    - terminal
+    - fonts
+    - role: devtools
+      users:
+        - username: "kurushimi"
+          visual_studio_code_extensions:
+            - vscodevim.vim
+            - sbrink.elm
+          visual_studio_code_settings: {
+            "editor.lineNumbers": "relative"
+          }
+    - teardown
