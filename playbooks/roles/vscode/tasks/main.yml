@@ -1,0 +1,7 @@
+- name: Installing visual studio code
+  include_tasks: install_vscode.yml
+
+- name: Installing vscode extensions
+  include_tasks: install_vscode_extensions.yml
+  
+

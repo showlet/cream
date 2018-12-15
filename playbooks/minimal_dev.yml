@@ -9,9 +9,9 @@
     - basictools
     - terminal
     - fonts
-    - role: devtools
+    - role: vscode
       users:
-        - username: "kurushimi"
+        - username: "showlet"
           visual_studio_code_extensions:
             - vscodevim.vim
             - sbrink.elm

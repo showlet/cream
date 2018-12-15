@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+echo "Wich playbook to run?"
+echo $( ls "$DIR/playbooks" | grep .yml)
+read run_playbook
+echo Now running $run_playbook
+
+pushd $DIR/ansible
+ansible-playbook ../playbooks/$run_playbook.yml --ask-become-pass -e "ansible_user=$USER"
+popd

@@ -10,4 +10,13 @@
     - basictools
     - terminal
     - fonts
+    - role: vscode
+      users:
+        - username: "showlet"
+          visual_studio_code_extensions:
+            - vscodevim.vim
+            - sbrink.elm
+          visual_studio_code_settings: {
+            "editor.lineNumbers": "relative"
+          }
     - teardown
